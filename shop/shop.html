@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shop</title>
+	<script type="text/javascript" src="https://samnettleton.github.io/setActive.js" ></script>
+	<script type="text/javascript" src="https://samnettleton.github.io/shop/shopToggle.js" ></script>
+	<link rel="stylesheet" type="text/css" href="https://samnettleton.github.io/style.css" />
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script> 
+    $(function(){
+      $("#navTop").load("https://samnettleton.github.io/navBarTop.html"); 
+    });
+	$(function(){
+      $("#navBottom").load("https://samnettleton.github.io/navBarBottom.html"); 
+    });
+    </script> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+</head>
+<body>
+	<div class="no-padding">
+		<div id="navTop" role="navigation">
+		</div>
+		<div class="dvContainer">
+			<img class="img-fill" src="https://samnettleton.github.io/shop/shop_background.png">
+  			<div class="dvInner">
+				<h1 class="thick title">Be prepared for it.</h1>
+				<hr width="85%">
+				<div id="shopButtons" class="subtitle-style">
+					<button class="shop-button" onclick="shopToggle('women'); document.getElementById('shopItems').scrollIntoView();">Shop Women's</button>
+					<p class="subtitle-style">|</p>
+					<button class="shop-button" onclick="shopToggle('men'); document.getElementById('shopItems').scrollIntoView();">Shop Men's</button>
+					<p class="subtitle-style">|</p>
+					<button class="shop-button" onclick="shopToggle('gear'); document.getElementById('shopItems').scrollIntoView();">Shop Gear</button>
+				</div>
+			</div>
+			<div class="dvInner2">
+				<p class="subtitle-style">Take 15% off a purchase of $100 or more.</p>
+			</div>
+		</div>
+		<script>
+		for (var i = 0; i < document.querySelectorAll("a.subtitle-style").length; i++) {
+			document.querySelectorAll("a.subtitle-style")[i].className = 'subtitle-style';
+			if (document.querySelectorAll("a.subtitle-style")[i].href == document.URL) {
+				document.querySelectorAll("a.subtitle-style")[i].className = 'subtitle-style active-body';
+			}
+		}
+		</script>
+		<div class="row" id="shopItems">
+			<!--women's shop items-->
+			<div id="women" class="shop-element">
+				<div class="grid-container">
+					<!--row 1 of images-->
+					<div class="grid-item">
+						<img class="shop-img" src="https://samnettleton.github.io/shop/Elements_Tshirt.png">
+					</div>
+					<div class="grid-item">
+						<img class="shop-img" src="https://samnettleton.github.io/shop/Happy_Camper_Tshirt.png">
+						</div>
+					<div class="grid-item">
+						<img class="shop-img" src="https://samnettleton.github.io/shop/Forest_Tshirt.png">
+					</div>
+					<!--row 1 of text-->
+					<div class="grid-item">
+						<h2 class="shop-item">Forest T-shirt</h2>
+						<h2 class="shop-item">$18</h2>
+						<p class="shop-item">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad </p>
+					</div>
+					<div class="grid-item">
+						<h2 class="shop-item">Happy Camper T-shirt</h2>
+						<h2 class="shop-item">$18</h2>
+						<p class="shop-item">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad </p>
+					</div>
+					<div class="grid-item">
+						<h2 class="shop-item">Elements T-shirt</h2>
+						<h2 class="shop-item">$18</h2>
+						<p class="shop-item">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad </p>
+					</div>
+				</div>
+				<div class="grid-container">
+					<!--row 2 of images-->
+					<div class="grid-item">
+						<img class="shop-img" src="https://samnettleton.github.io/shop/Mountains_Tshirt.png">
+					</div>
+					<div class="grid-item">
+						<img class="shop-img" src="https://samnettleton.github.io/shop/Id_Paddle_That_Tank.png">
+						</div>
+					<div class="grid-item">
+						<img class="shop-img" src="https://samnettleton.github.io/shop/Explore_Tank.png">
+					</div>
+					<!--row 2 of text-->
+					<div class="grid-item">
+						<h2 class="shop-item">Mountains T-shirt</h2>
+						<h2 class="shop-item">$18</h2>
+						<p class="shop-item">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad </p>
+					</div>
+					<div class="grid-item">
+						<h2 class="shop-item">I’d Paddle That Tank</h2>
+						<h2 class="shop-item">$18</h2>
+						<p class="shop-item">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad </p>
+					</div>
+					<div class="grid-item">
+						<h2 class="shop-item">Explore Tank</h2>
+						<h2 class="shop-item">$18</h2>
+						<p class="shop-item">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad </p>
+					</div>
+				</div>
+			</div>
+			<div id="men" class="shop-element">
+				<h2 class="shop-item">Men's shop items currently unavailable</h2>
+			</div>
+			<div id="gear" class="shop-element">
+				<h2 class="shop-item">Gear currently unavailable</h2>
+			</div>
+		</div>
+		<div id="navBottom">
+		</div>
+	</div>
+</body>
+</html>
+
+<!--<div id="shopLinks" class="subtitle-style">
+					<button onclick="">Click Me</button>
+					<li class="subtitle-style">
+						<a class="subtitle-style" href="https://samnettleton.github.io/shop/shop.html">Shop Women's</a>
+					</li>
+					<p class="subtitle-style">|</p>
+					<li class="subtitle-style">
+						<a class="subtitle-style" href="https://samnettleton.github.io/shop/index.html">Shop Men's</a>
+					</li>
+					<p class="subtitle-style">|</p>
+					<li class="subtitle-style">
+						<a class="subtitle-style" href="https://samnettleton.github.io/shop/index.html">Shop Gear</a>
+					</li>
+				</div>-->
+
