@@ -2,7 +2,9 @@
 <html>
 <head>
 	<title>Our Mission</title>
-	<link rel="stylesheet" type="text/css" href="https://samnettleton.github.io/style.css" />
+	<script type="text/javascript" src="http://127.0.0.1:8887/setActive.js" ></script>
+	<script type="text/javascript" src="http://127.0.0.1:8887/divToggle.js" ></script>
+	<link rel="stylesheet" type="text/css" href="http://127.0.0.1:8887/style.css" />
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<!-- jQuery library -->
@@ -11,25 +13,92 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script> 
     $(function(){
-      $("#navTop").load("https://samnettleton.github.io/navBarTop.html"); 
+      $("#navTop").load("http://127.0.0.1:8887/navBarTop.html"); 
     });
 	$(function(){
-      $("#navBottom").load("https://samnettleton.github.io/navBarBottom.html"); 
+      $("#navBottom").load("http://127.0.0.1:8887/navBarBottom.html"); 
     });
     </script> 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 </head>
 <body>
 	<div class="no-padding">
 		<div id="navTop" role="navigation">
 		</div>
-		<div>
-     		 <img class="img-fill" src="https://samnettleton.github.io/mission/Our_Mission.png" alt="Make a difference.">
- 		</div>
+		<div class="dvContainer">
+			<img class="img-fill" src="http://127.0.0.1:8887/mission/Our_Mission.png" alt="Make a difference.">
+			<div class="dvInner">
+				<div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1 dvBlock">
+					<h1 class="thick title">Make a difference.</h1>
+					<hr class="divider" width="85%"/>
+					<div id="missionButtons" class="subtitle-style">
+						<button class="subtitle-button" onclick="divToggle(['serve', 'protect'], 'protect');">Protect</button>
+						<p class="subtitle-style">|</p>
+						<button class="subtitle-button" onclick="divToggle(['serve', 'protect'], 'serve');">Serve</button>
+						<!-- document.getElementById('shopItems').scrollIntoView();-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+		// Add active class to the current button (highlight it)
+		var header = document.getElementById("missionButtons");
+		var btns = header.getElementsByClassName("subtitle-button");
+		for (var i = 0; i < btns.length; i++) {
+		btns[i].addEventListener("click", function() {
+			var current = document.getElementsByClassName("active-body");
+			if (current.length > 0 && this !== current[0]) {
+				current[0].className = current[0].className.replace(" active-body", "");
+			}
+			//check to see if current button is active
+			if (this.className === 'subtitle-button active-body') {
+				this.className = this.className.replace(" active-body", "");
+			} else {
+				document.getElementById('missions').scrollIntoView(); //scroll to div
+				this.className += " active-body";
+			}
+		});
+		}
+		</script>
+		<div class="row">
+		<div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" id="missions">
+			<!--protect mission-->
+			<div id="protect" class="mission-element">
+				<h1 class="mission-title thick">Protect</h1>
+				<hr class="divider" style="border: 0.5px solid #000" width="22%"/>
+				<div class="col-md-7 col-xs-12 mission-box">
+					<img class="mission-img" src="http://127.0.0.1:8887/mission/Protect.png">
+				</div>
+				<div class="col-md-4 col-xs-12 mission-box">
+					<p class="mission-style-header thick">Boundary Waters Canoe Area</p>
+					<p class="mission-style">The Boundary Waters Canoe Area spanning the border of Minnesota and Canada is being threatened by sulfide mines. If these mines are created, there will be massive water pollution, which will destory this pristine, one of a kind place. Join us in our efforts to protect the Boundary Waters. </p>
+					<li class="mission-link">
+						<a class="mission-link thick">Join Us</a>
+					</li>
+				</div>
+			</div>
+			<!--serve mission-->
+			<div id="serve" class="shop-element">
+				<h1 class="mission-title thick">Serve</h1>
+				<hr class="divider" style="border: 0.5px solid #000" width="22%"/>
+				<div class="col-md-7 col-xs-12 mission-box">
+					<img class="mission-img" src="http://127.0.0.1:8887/mission/Serve.png">
+				</div>
+				<div class="col-md-4 col-xs-12 mission-box">
+					<p class="mission-style-header thick">Adventuring for a Cause</p>
+					<p class="mission-style">Use you outdoor skills for the better and experience something not many people have experienced before. Camp in a new country and helpthose who are less fortunate than you.  </p>
+					<li class="mission-link">
+						<a class="mission-link thick">Join Us</a>
+					</li>
+				</div>
+			</div>
+		</div>
+		</div>
 		<div id="navBottom">
 		</div>
 	</div>
+</body>
+</html>
 </body>
 </html>
 

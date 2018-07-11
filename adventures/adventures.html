@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Adventures</title>
-	<link rel="stylesheet" type="text/css" href="https://samnettleton.github.io/style.css" />
+	<link rel="stylesheet" type="text/css" href="http://127.0.0.1:8887/style.css" />
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<!-- jQuery library -->
@@ -11,22 +11,64 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script> 
     $(function(){
-      $("#navTop").load("https://samnettleton.github.io/navBarTop.html"); 
+      $("#navTop").load("http://127.0.0.1:8887/navBarTop.html"); 
     });
 	$(function(){
-      $("#navBottom").load("https://samnettleton.github.io/navBarBottom.html"); 
+      $("#navBottom").load("http://127.0.0.1:8887/navBarBottom.html"); 
     });
     </script> 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 </head>
 <body>
 	<div class="no-padding">
 		<div id="navTop" role="navigation">
 		</div>
-		<div>
-     		 <img class="img-fill" src="https://samnettleton.github.io/adventures/Adventures.png" alt="Make a difference.">
- 		</div>
+		<div class="dvContainer">
+			<img class="img-fill" src="http://127.0.0.1:8887/adventures/Adventures.png">
+			<div class="dvInner">
+				<div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1 dvBlock">
+					<h1 class="thick title">Go experience it.</h1>
+					<hr class="divider" width="85%"/>
+					<p class="subtitle-style">Find your perfect adventure</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" id="adventures">
+				<h1 class="adventure-title thick">Choose Your Location</h1>
+				<hr class="divider" style="border: 0.5px solid #000" width="65%"/>
+				<div class="col-md-12 col-xs-12 adventure-box">
+					<div class="col-md-8 col-xs-12">
+						<img class="mission-img" src="http://127.0.0.1:8887/adventures/Specialty_Trip.png">
+					</div>
+					<div class="col-md-3 col-xs-12">
+						<p class="adventure-style-header thick">Specialty Trip</p>
+						<p class="adventure-style">South Africa</p>
+					</div>
+				</div>
+				<div class="col-md-5 col-xs-12 adventure-box">
+					<div class="image-container">
+					<img class="mission-img" src="http://127.0.0.1:8887/adventures/Tasmania.png">
+						<div class="image-overlay">
+							<div class="text-fill">
+								<p class="overlay-style thick">Cradle Mountain, Tasmania</p>
+								<p class="overlay-style">Are you an experinced backpacker? Take your abilities to the next level by going on one of our specialty adventures.</p>
+								<li>
+									<a class="overlay-style thick">Join Us</a>
+								</li>
+							</div>
+						</div>
+					</div>
+					<p class="adventure-style">Tasmania</p>
+				</div>
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-5 col-xs-12 adventure-box">
+					<img class="mission-img" src="http://127.0.0.1:8887/adventures/BWCA.png">
+					<p class="adventure-style">Boundary Waters Canoe Area</p>
+				</div>
+			</div>
+		</div>
 		<div id="navBottom">
 		</div>
 	</div>
